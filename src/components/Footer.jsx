@@ -1,19 +1,27 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100">
-        <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+      <footer className="bg-gradient-to-r from-gray-100 via-[#d1d1d1] to-gray-100">
+        <div className="flex flex-wrap justify-between max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
-              <img src="#" className="mr-5 h-6 sm:h-9" alt="logo" />
-              <p className="max-w-xs mt-4 text-sm text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas, accusantium.
+              {/* Update the src with the path to your logo */}
+              <img
+                src="/src/assets/cover.png"
+                className="h-56 w-40 sm:h-14"
+                alt="Tasin.dev logo"
+              />
+              <p className="max-w-xs mt-4 text-sm text-gray-700">
+                Building dynamic and responsive websites that bring your ideas
+                to life. Let's create something great together.
               </p>
-              <div className="flex mt-8 space-x-6 text-gray-600">
+              <div className="flex mt-8 space-x-6 text-gray-700">
+                {/* Update href with your social media links */}
                 <a
                   className="hover:opacity-75"
-                  href
+                  href="https://facebook.com/yourprofile"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -33,7 +41,7 @@ const Footer = () => {
                 </a>
                 <a
                   className="hover:opacity-75"
-                  href
+                  href="https://instagram.com/yourprofile"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -53,7 +61,7 @@ const Footer = () => {
                 </a>
                 <a
                   className="hover:opacity-75"
-                  href
+                  href="https://twitter.com/yourprofile"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -69,7 +77,7 @@ const Footer = () => {
                 </a>
                 <a
                   className="hover:opacity-75"
-                  href
+                  href="https://github.com/yourprofile"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -89,7 +97,7 @@ const Footer = () => {
                 </a>
                 <a
                   className="hover:opacity-75"
-                  href
+                  href="https://dribbble.com/yourprofile"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -111,92 +119,72 @@ const Footer = () => {
             </div>
             <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
               <div>
-                <p className="font-medium">Company</p>
-                <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    About{" "}
+                <p className="font-medium">Portfolio</p>
+                <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-700">
+                  <Link className="hover:opacity-75" to="/">
+                    Home
+                  </Link>
+                  <Link className="hover:opacity-75" to="/about">
+                    About
+                  </Link>
+                  <Link className="hover:opacity-75" to="/projects">
+                    Projects
+                  </Link>
+                  <Link className="hover:opacity-75" to="/contact">
+                    Contact
+                  </Link>
+                </nav>
+              </div>
+              <div>
+                <p className="font-medium">Resources</p>
+                <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-700">
+                  <a className="hover:opacity-75" href="https://blog.tasin.dev">
+                    Blog
                   </a>
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    Meet the Team{" "}
+                  <a
+                    className="hover:opacity-75"
+                    href="https://courses.tasin.dev"
+                  >
+                    Courses
                   </a>
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    History{" "}
-                  </a>
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    Careers{" "}
+                  <a
+                    className="hover:opacity-75"
+                    href="https://tutorials.tasin.dev"
+                  >
+                    Tutorials
                   </a>
                 </nav>
               </div>
               <div>
-                <p className="font-medium">Services</p>
-                <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    1on1 Coaching{" "}
-                  </a>
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    Company Review{" "}
-                  </a>
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    Accounts Review{" "}
-                  </a>
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    HR Consulting{" "}
-                  </a>
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    SEO Optimisation{" "}
-                  </a>
-                </nav>
-              </div>
-              <div>
-                <p className="font-medium">Helpful Links</p>
-                <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    Contact{" "}
-                  </a>
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    FAQs{" "}
-                  </a>
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    Live Chat{" "}
+                <p className="font-medium">Connect</p>
+                <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-700">
+                  <Link className="hover:opacity-75" to="/networking">
+                    Networking
+                  </Link>
+                  <a
+                    className="hover:opacity-75"
+                    href="mail to:mdtasinalam.mta@gmail.com"
+                  >
+                    Email Me
                   </a>
                 </nav>
               </div>
               <div>
                 <p className="font-medium">Legal</p>
-                <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    Privacy Policy{" "}
-                  </a>
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    Terms &amp; Conditions{" "}
-                  </a>
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    Returns Policy{" "}
-                  </a>
-                  <a className="hover:opacity-75" href>
-                    {" "}
-                    Accessibility{" "}
-                  </a>
+                <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-700">
+                  <Link className="hover:opacity-75" to="/privacy-policy">
+                    Privacy Policy
+                  </Link>
+                  <Link className="hover:opacity-75" to="/terms">
+                    Terms & Conditions
+                  </Link>
                 </nav>
               </div>
             </div>
           </div>
-          <p className="mt-8 text-xs text-gray-800">© 2022 Comany Name</p>
+          <p className="mt-8 text-xs text-gray-800">
+            © 2023 Tasin.dev. All rights reserved.
+          </p>
         </div>
       </footer>
     </div>

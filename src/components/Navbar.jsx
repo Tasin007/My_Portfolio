@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="flex  max-w-screen-xl  items-center justify-between navbar bg-base-100 px-4 md:px-6 lg:px-8">
       {/* Navbar Start - Logo and Website Name */}
       <div className="navbar-start">
         <a
@@ -111,7 +111,7 @@ const Navbar = () => {
         </div>
         <ul
           tabIndex={0}
-          className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+          className="menu menu-compact dropdown-content mt-3 p-1 shadow bg-base-100 rounded-box w-22"
         >
           <li>
             <Link to="/">Home</Link>

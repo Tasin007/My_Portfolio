@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.postimg.cc/Jhpv3Ymg/Hostel-Hub.png",
+        "title": "Hostel Management Website",
+        "details": "This web application utilizes Firebase Authentication, JWT for security, and various React packages like Material-UI, Stripe, and React Query. Users can create and view articles, with admin approval for publishing. Admins manage users, articles, and publishers through a dashboard featuring charts. Premium content is protected, and payment integration is provided via Stripe.",
+        "github": "https://github.com/Tasin007/Hostel-Management-Client",
+        "Live_Link": "https://hostel-management-client-site.vercel.app/"
+    },
+    {
+        "id": 2,
+        "image": "https://i.postimg.cc/kGbHmn83/EventHub.png",
+        "title": "Event Management System Website",
+        "details": "This Event management website offers a seamless experience with both dark and light mode themes. Users can explore brands, view products, and access features like adding to cart and updating items after logging in. The site supports account creation via email/password or direct login with Google for user convenience.",
+        "github": "https://github.com/Tasin007/Event-Management",
+        "Live_Link": "https://event-management-project-dusky.vercel.app/"
+    },
+    {
+        "id": 3,
+        "image": "https://i.postimg.cc/zfFPztVv/JobHive.png",
+        "title": "Job Seeking Website",
+        "details": "This dynamic website features automatic route-based renaming, Firebase-powered user registration and login. It includes an extensive services page with search functionality, enabling users to book and manage services. Users can add and oversee their own services, with a dedicated schedule page displaying booked services and an error-handling 404 page. Framer Motion enhances the overall user experience.",
+        "github": "https://github.com/Tasin007/Job-Hive-client",
+        "Live_Link": "https://job-hive-client-side.vercel.app/"
+    },
+    
+    {
+        "id": 4,
+        "image": "https://i.postimg.cc/FHWVDMdj/Tech-Xpress.png",
+        "title": "Tech shop Website",
+        "details": "This website comprises six sections, featuring exclusive 'Tech Details' accessible only to logged-in users via email-password or Google sign-in. Registration prohibits multiple accounts with the same email. After logging in, the user's name and photo appear in the header, granting access to private sections like 'Gallery' and 'User Profile,' showcasing personalized animations for an enhanced user experience.",
+        "github": "https://github.com/Tasin007/TechXpress-client",
+        "Live_Link": "https://tech-xpress-client.vercel.app/"
+    }
+]
