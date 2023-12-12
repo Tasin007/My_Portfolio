@@ -1,6 +1,46 @@
-
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 const ContactMe = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    tel: "",
+  });
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Replace with your Email.js service ID, template ID, and user ID
+    const serviceID = "service_uk0xm87";
+    const templateID = "template_t70hxrh";
+    const userID = "8x4CKLBBmj6E73T40"; 
+
+    emailjs.send(serviceID, templateID, formData, userID)
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        // You can add a success message or redirect the user after sending the email
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        // Handle errors, e.g., display an error message to the user
+      });
+
+    // Clear form data after submission
+    setFormData({
+      name: "",
+      email: "",
+      tel: "",
+    });
+  };
+
   return (
     <div className="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
       <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
@@ -16,7 +56,7 @@ const ContactMe = () => {
               </p>
 
               <div className="flex items-center mt-8 text-gray-600 dark:text-gray-400">
-                <svg
+              <svg
                   fill="none"
                   stroke="currentColor"
                   strokeLinecap="round"
@@ -39,12 +79,12 @@ const ContactMe = () => {
                   />
                 </svg>
                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                26/D/2 Maneshwer, Hazaribag, Dhaka
+                  26/D/2 Maneshwer, Hazaribag, Dhaka
                 </div>
               </div>
 
               <div className="flex items-center mt-4 text-gray-600 dark:text-gray-400">
-                <svg
+              <svg
                   fill="none"
                   stroke="currentColor"
                   strokeLinecap="round"
@@ -66,7 +106,7 @@ const ContactMe = () => {
               </div>
 
               <div className="flex items-center mt-2 text-gray-600 dark:text-gray-400">
-                <svg
+              <svg
                   fill="none"
                   stroke="currentColor"
                   strokeLinecap="round"
@@ -88,7 +128,7 @@ const ContactMe = () => {
               </div>
             </div>
 
-            <form className="p-6 flex flex-col justify-center">
+            <form className="p-6 flex flex-col justify-center" onSubmit={handleSubmit}>
               <div className="flex flex-col">
                 <label htmlFor="name" className="hidden">
                   Full Name
@@ -98,6 +138,8 @@ const ContactMe = () => {
                   name="name"
                   id="name"
                   placeholder="Full Name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
                   required
                 />
@@ -112,6 +154,8 @@ const ContactMe = () => {
                   name="email"
                   id="email"
                   placeholder="Email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
                   required
                 />
@@ -126,6 +170,8 @@ const ContactMe = () => {
                   name="tel"
                   id="tel"
                   placeholder="Telephone Number"
+                  value={formData.tel}
+                  onChange={handleInputChange}
                   className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
                   required
                 />
